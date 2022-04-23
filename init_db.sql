@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS questions (
   question_id SERIAL NOT NULL PRIMARY KEY,
-  product_id INT,
-  body INT,
-  date_written TEXT,
-  asker_name TEXT,
+  product_id INT NOT NULL,
+  body TEXT NOT NULL,
+  date_written BIGINT NOT NULL,
+  asker_name TEXT NOT NULL,
   asker_email TEXT,
   reported BOOLEAN,
   helpful INT
@@ -11,16 +11,16 @@ CREATE TABLE IF NOT EXISTS questions (
 
 CREATE TABLE IF NOT EXISTS answers (
   answer_id SERIAL NOT NULL PRIMARY KEY,
-  question_id INT,
-  body INT,
-  date_written TEXT,
-  answerer_name TEXT,
+  question_id INT NOT NULL,
+  body TEXT NOT NULL,
+  date_written BIGINT NOT NULL,
+  answerer_name TEXT NOT NULL,
   answerer_email TEXT,
-  reported BOOLEAN,
-  helpful INT,
+  reported BOOLEAN NOT NULL,
+  helpful INT NOT NULL,
   CONSTRAINT questions
     FOREIGN KEY(question_id)
-      REFERENCES questions(question_id);
+      REFERENCES questions(question_id)
 );
 
 CREATE TABLE IF NOT EXISTS answers_photos (
