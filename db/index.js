@@ -9,7 +9,7 @@ const pool = new Pool({
   // host: 'ec2-54-71-136-145.us-west-2.compute.amazonaws.com',
   // host: '54.71.136.145',
   host: '52.12.167.107',
-  password: 'rfp2202',
+  password: `${config.PGPASS}`,
   database: 'questions_answers',
   port: '5432',
   // SecretKey: `${config.pemkey}`
