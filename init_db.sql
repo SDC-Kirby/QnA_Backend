@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS answers (
 CREATE TABLE IF NOT EXISTS answers_photos (
   photo_id SERIAL NOT NULL PRIMARY KEY,
   answer_id INT,
-  url TEXT
+  url TEXT,
   CONSTRAINT answers
-    FOREIGN KEY answer_id
+    FOREIGN KEY (answer_id)
       REFERENCES answers(answer_id)
 );

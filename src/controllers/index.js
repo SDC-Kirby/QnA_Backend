@@ -16,12 +16,23 @@ exports.getAll = (req, res) => {
                 FROM (SELECT url FROM answers_photos WHERE answer_id = answers.answer_id) answers_photos)
               )
       ) AS answers FROM answers WHERE questions.question_id = answers.question_id AND answers.reported = 'f')
-      FROM questions where questions.product_id = 888999 AND questions.reported = 'f') questions
-    )) object`, [ product ])
+      FROM questions where questions.product_id = 40684 AND questions.reported = 'f') questions
+    )) as object`
+    )
     .then((response) => {
-      // console.log(response.rows[0].object);
+      console.log(response.rows[0].object);
       res.status(200).send(response.rows[0].object.results);
     }).catch((err) => {
       console.log(err.message);
     });
 };
+
+
+/*
+const getQuestions = (product_id, page = 1, count = 5) => {
+  return axios.get(sdchost + `/qa/questions/${product_id}/${page}/${count}`, options)
+    .then((res) => { console.log('resdata', res.data);
+      return res.data})
+    .catch((err) => console.error(err));
+};
+*/

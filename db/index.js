@@ -1,16 +1,24 @@
 const { Pool } = require('pg');
+// eslint-disable-next-line import/extensions
+const config = require('../config.js');
 
 const pool = new Pool({
-  user: 'michael',
-  host: 'localhost',
+  user: 'postgres',
+  // host: 'localhost',
+  // host: 'ubuntu@172.31.22.101',
+  // host: 'ec2-54-71-136-145.us-west-2.compute.amazonaws.com',
+  // host: '54.71.136.145',
+  host: '52.12.167.107',
+  password: 'rfp2202',
   database: 'questions_answers',
-  password: '',
-  port: '5432'
+  port: '5432',
+  // SecretKey: `${config.pemkey}`
 });
 pool.connect(err => console.log(err));
 module.exports = {
   pool
 };
+//
 
 // module.exports = {
 //   query: (text, params) => {
