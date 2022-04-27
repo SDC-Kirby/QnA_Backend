@@ -18,6 +18,10 @@ router.post('/qa/questions', (req, res) => {
     .catch(err => console.log(err));
 });
 
+router.get('/loaderio-bd92bd88f528fda8847c589daa6972a0.txt', (req, res) => {
+  res.sendStatus(200);
+});
+
 router.put('/qa/questions/:question_id/helpful', (req, res) => {
   pool.query(`UPDATE questions SET helpful = helpful + 1  WHERE question_id = ${req.params.question_id} `)
     .then(res.sendStatus(200))
