@@ -20,7 +20,7 @@ exports.getAll = (req, res) => {
     )) as object`
     )
     .then((response) => {
-      console.log(response.rows[0].object);
+      // console.log(response.rows[0].object);
       res.status(200).send(response.rows[0].object.results);
     }).catch((err) => {
       console.log(err.message);
