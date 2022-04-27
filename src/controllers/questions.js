@@ -20,7 +20,7 @@ exports.getAll = (req, res) => {
       FROM questions where questions.product_id = $1 AND questions.reported = 'f') questions
     )) as object`, [ product ])
     .then((response) => {
-      console.log('productID: ', req.params.product_id, 'Page: ', req.params.page, 'Count: ', req.params.count);
+      // console.log('productID: ', req.params.product_id, 'Page: ', req.params.page, 'Count: ', req.params.count);
       res.status(200).send(response.rows[0].object.results);
     }).catch(err => console.log(err));
 };
