@@ -19,7 +19,7 @@ router.post('/qa/questions', (req, res) => {
 });
 
 router.get('/loaderio-bd92bd88f528fda8847c589daa6972a0.txt', (req, res) => {
-  res.sendStatus(200);
+  res.status(200).send('loaderio-bd92bd88f528fda8847c589daa6972a0');
 });
 
 router.put('/qa/questions/:question_id/helpful', (req, res) => {
