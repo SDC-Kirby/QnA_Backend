@@ -35,7 +35,7 @@ router.put('/qa/answers/:answer_id/helpful', putAnswerHelpful);
 router.put('/qa/answers/:answer_id/report', putAnswerReported);
 
 // This route is for loader.io verification only
-router.get(`/loaderio-${config.LoaderIO}.txt`, (req, res) => {
-  res.status(200).send(`${config.LoaderIO}`);
+router.get('/loaderio-bd92bd88f528fda8847c589daa6972a0.txt', (req, res) => {
+  res.status(200).send('loaderio-bd92bd88f528fda8847c589daa6972a0');
 });
 module.exports = router;
