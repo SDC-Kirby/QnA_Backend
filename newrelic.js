@@ -1,4 +1,3 @@
-'use strict'
 /**
  * New Relic agent configuration.
  *
@@ -9,7 +8,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['SDC'],
+  app_name: [ 'SDC' ],
   /**
    * Your New Relic license key.
    */
@@ -66,4 +65,4 @@ exports.config = {
       'response.headers.x*'
     ]
   }
-}
+};

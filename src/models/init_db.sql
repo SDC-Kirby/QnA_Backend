@@ -1,3 +1,4 @@
+--default questions table--
 CREATE TABLE IF NOT EXISTS questions (
   question_id SERIAL NOT NULL PRIMARY KEY,
   product_id INT NOT NULL,
@@ -8,7 +9,7 @@ CREATE TABLE IF NOT EXISTS questions (
   reported BOOLEAN,
   helpful INT
 );
-
+--default answers table
 CREATE TABLE IF NOT EXISTS answers (
   answer_id SERIAL NOT NULL PRIMARY KEY,
   question_id INT NOT NULL,
@@ -22,7 +23,7 @@ CREATE TABLE IF NOT EXISTS answers (
     FOREIGN KEY(question_id)
       REFERENCES questions(question_id)
 );
-
+--default photos table--
 CREATE TABLE IF NOT EXISTS answers_photos (
   photo_id SERIAL NOT NULL PRIMARY KEY,
   answer_id INT,
