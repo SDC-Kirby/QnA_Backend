@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 const express = require('express');
 // eslint-disable-next-line import/no-unresolved
-const config = require('../config.js');
+const config = require('../../config.js');
 const {
   getAll, postQuestion, putQuestionHelpful, putQuestionReported
 } = require('../controllers/questions.js');
