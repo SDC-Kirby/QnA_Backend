@@ -4,7 +4,7 @@ const config = require('../config.js');
 
 const pool = new Pool({
   user: 'postgres',
-  host: '52.12.167.107',
+  host: '34.221.180.152',
   password: `${config.PGPASS}`,
   database: 'questions_answers',
   port: '5432',
